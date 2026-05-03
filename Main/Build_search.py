@@ -70,7 +70,7 @@ def streamlit_main():
     generator_details.title("**:green[Wynncraft] Build Solver**")
     generator_details.markdown(
         """ 
-        *A local only tool for build solving!* The only tool you will need!
+        *A local only tool for build solving!*
         """
     )
 
