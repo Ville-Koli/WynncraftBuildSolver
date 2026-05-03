@@ -163,7 +163,7 @@ def streamlit_main():
 
         result_container.markdown("**Result**")
 
-        dataframe = DataFrame({"yBest" : yBest, "yAverage" : yAverage}, index=x)
+        dataframe = DataFrame({"yBest" : yBest[0:-1,10], "yAverage" : yAverage[0:-1,10]}, index=x)
 
         result_container.line_chart(dataframe)
         build_items = bestBuild.get_items()
