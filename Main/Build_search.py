@@ -163,7 +163,9 @@ def streamlit_main():
 
         result_container.markdown("**Result**")
 
-        step_size = len(x) * 0.1
+        step_size = max(int(len(x) * 0.1), 1)
+
+        x = x[0:-1:step_size]
 
         dataframe = DataFrame({"yBest" : yBest[0:-1:step_size], "yAverage" : yAverage[0:-1:step_size]}, index=x)
 
